@@ -1,0 +1,55 @@
+<div class="bg-gray-900 border border-gray-800 rounded-2xl max-w-md w-full p-6 space-y-4">
+            <div class="flex justify-between items-center border-b border-gray-800 pb-3">
+                <h3 class="font-bold text-white text-base">سحب الأرباح (رأس المال محمي)</h3>
+                <button onclick="closeWithdrawModal()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            <div>
+                <label class="block text-xs text-gray-400 mb-1">اختر شبكة السحب</label>
+                <select class="w-full bg-gray-950 border border-gray-800 rounded-xl p-2.5 text-xs text-white">
+                    <option>USDT (TRC20)</option>
+                    <option>USDT (BEP20)</option>
+                    <option>TRX (Tron)</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-xs text-gray-400 mb-1">عنوان محفظتك الشخصية</label>
+                <input type="text" placeholder="الصق عنوان محفظتك هنا..." class="w-full bg-gray-950 border border-gray-800 rounded-xl p-2.5 text-xs text-white outline-none focus:border-blue-500">
+            </div>
+            <div>
+                <label class="block text-xs text-gray-400 mb-1">كمية السحب (الأرباح المتاحة فقط)</label>
+                <input type="number" placeholder="مثال: 25" class="w-full bg-gray-950 border border-gray-800 rounded-xl p-2.5 text-xs text-white outline-none focus:border-blue-500">
+            </div>
+            <button onclick="submitWithdrawRequest()" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition text-xs shadow-lg shadow-green-600/30">إرسال طلب السحب الفوري</button>
+        </div>
+    </div>
+
+    <script>
+        function closeModal() {
+            document.getElementById('welcome-modal').style.display = 'none';
+        }
+        function openDepositModal() {
+            document.getElementById('deposit-modal').style.display = 'flex';
+        }
+        function closeDepositModal() {
+            document.getElementById('deposit-modal').style.display = 'none';
+        }
+        function openWithdrawModal() {
+            document.getElementById('withdraw-modal').style.display = 'flex';
+        }
+        function closeWithdrawModal() {
+            document.getElementById('withdraw-modal').style.display = 'none';
+        }
+
+        // محاكاة إرسال الإشعار الفوري للإدارة إلى بريدك nnnnaaatttnanooo@gmail.com
+        function submitDepositRequest() {
+            alert('تم إرسال طلب الإيداع بنجاح! سيتم إشعاره فوراً إلى بريد الإدارة: nnnnaaatttnanooo@gmail.com للمراجعة والتفعيل.');
+            closeDepositModal();
+        }
+
+        function submitWithdrawRequest() {
+            alert('تم إرسال طلب السحب بنجاح! سيتم إشعاره فوراً إلى بريد الإدارة: nnnnaaatttnanooo@gmail.com للمعالجة.');
+            closeWithdrawModal();
+        }
+    </script>
+</body>
+</html>
